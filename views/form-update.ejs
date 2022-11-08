@@ -1,0 +1,21 @@
+<h1>Update user</h1>
+<form action="/update" method="POST">
+  ID: <input type="text" name="id" value="<%= lop.id%>" /> <br />
+  IdDistrict:
+  <input type="String" name="IdDistrict" value="<%= lop.IdDistrict%>" /><br />
+  IdVillage:
+  <input type="String" name="IdVillage" value="<%= lop.IdVillage%>" /><br />
+  Address:
+  <input type="String" name="Address" value="<%= lop.Address%>" /><br />
+  IsGetNotification :
+  <input
+    type="String"
+    name="IsGetNotification"
+    value="<%= lop.IsGetNotification %>"
+  /><br />
+  IsVerified:
+  <input type="String" name="IsVerified" value="<%= lop.IsVerified%>" /><br />
+  IsGetOpen:
+  <input type="String" name="IsGetOpen" value="<%= lop.IsGetOpen%>" /><br />
+  <button type="submit">Update user</button>
+</form>
