@@ -1,10 +1,24 @@
-<h1>Thêm user</h1>
-<form action="/add" method="POST">
-  IdDistrict: <input type="String" name="IdDistrict" /><br />
-  IdVillage: <input type="String" name="IdVillage" /><br />
-  Address: <input type="String" name="Address" /><br />
-  IsGetNotification: <input type="String" name="IsGetNotification" /><br />
-  IsVerified: <input type="String" name="IsVerified" /><br />
-  IsGetOpen: <input type="String" name="IsGetOpen" /><br />
-  <button type="submit">Thêm user</button>
+<h1>Thêm mới</h1>
+<form action="/add" method="post">
+    <table border="1">
+
+
+        Phone:
+        <input type="number" name="phone"><br> Password:
+        <input type="text" name="password"><br> TypeRegister:
+        <input type="text" name="register"><br> Full name:
+        <input type="text" name="fname"><br> Type User:
+        <input type="number" name="type"><br>
+
+
+    </table>
+
+
+    <!-- EnableFCM: <input type="number" name="enable"><br>
+    Avarta: <input type="text" name="avarta"><br>
+    Banner: <input type="text" name="banner"><br>
+    Full name: <input type="text" name="fname"><br>
+    Type User: <input type="number" name="type"><br> -->
+
+    <button type="submit">Thêm</button>
 </form>

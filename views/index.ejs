@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Danh Sách user</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-  </head>
-  <body>
-    <h1>Danh Sach user</h1>
-    <a href="form-add"><button>Add user</button></a><br /><br />
-    <table border="2">
-      <tr>
-        <th>ID</th>
-        <th>IdDistrict</th>
-        <th>IdVillage</th>
-        <th>Address</th>
-        <th>IsGetNotification</th>
-        <th>IsVerified</th>
-        <th>IsGetOpen</th>
-        <th>ACTION</th>
-      </tr>
-      <% user3s.forEach(item => { %>
-      <tr>
-        <td><%= item._id %></td>
-        <td><%= item.IdDistrict %></td>
-        <td><%= item.IdVillage %></td>
-        <td><%= item.Address %></td>
-        <td><%=item.IsGetNotification %></td>
-        <td><%=item.IsVerified %></td>
-        <td><%=item.IsGetOpen %></td>
-        <td>
-          <a href="/form-update/<%= item._id%>">Update</a>||<a
-            href="/form-delete/<%= item._id%>"
-            >Delete</a
-          >
-        </td>
-      </tr>
-      <% }) %>
+
+<head>
+    <title>Danh sach </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Danh Sach </h1>
+    <a href="/form-add"><button type="submit">Thêm mới</button></a>
+    <table border="1">
+        <tr>
+            <th>IDProvince</th>
+            <th>Phone</th>
+            <th>Password</th>
+            <th>TypeRegister</th>
+            <th>Full Name</th>
+            <th>Type User</th>
+            <th>Acction</th>
+        </tr>
+        <% custommertwos.forEach(item=> {%>
+            <tr>
+                <td>
+                    <%= item._id %>
+                </td>
+                <td>
+                    <%= item.phone %>
+                </td>
+                <td>
+                    <%= item.password %>
+                </td>
+                <td>
+                    <%= item.register %>
+                </td>
+                <td>
+                    <%= item.fname %>
+                </td>
+                <td>
+                    <%= item.type %>
+                </td>
+                <td><a href="/form-update/<%= item._id %>">Update</a>||<a href="/form-delete/<%= item._id %>">Delete</a>
+                </td>
+            </tr>
+            <%})%>
     </table>
-  </body>
+</body>
+
 </html>
